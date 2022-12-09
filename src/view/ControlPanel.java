@@ -106,7 +106,7 @@ public class ControlPanel extends JPanel {
         		
 	        	//联机模式得让对面收到悔棋操作
 	        	if(GameCenter.getMode()==GameCenter.MODE_ONLINE) {
-	        		DataSocket.send("retract");
+	        		DataSocket.send(DataSocket.RETRACT);
 	        	}
 	        	ChessBoard.myBroad.repaint();	
 	        	GameCenter.showChess();

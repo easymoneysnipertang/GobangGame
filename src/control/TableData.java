@@ -60,6 +60,7 @@ public class TableData {
         if (gameOver) {//游戏已结束则直接返回
             return;
         }
+        //nonsense
         if (!nowColor.equals(mColor)) {
             System.out.println("putChess() 不属于此玩家操作" + mColor);
             return;

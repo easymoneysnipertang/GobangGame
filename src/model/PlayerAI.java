@@ -27,7 +27,6 @@ public class PlayerAI extends Player{
             return playRandom(mColor);
         }
 
-        //此段代码实现进攻
         //同时计算对手的权值，获得权值最大的点
         String matchColor = Spot.getBackColor(mColor);//对手的棋色
         Spot matchSpot = maxSpot(matchColor);
@@ -36,7 +35,6 @@ public class PlayerAI extends Player{
         int b = getWeight(matchSpot, matchColor);
         System.out.println("我方最大值:" + a + ",  对方最大值:" + b);
         if (b - a > 550) {
-            //与对手的权值差是否超过100
             maxWeightSpot = matchSpot;//围堵对方
         }
         //重新生成Spot对象，防止棋色错误

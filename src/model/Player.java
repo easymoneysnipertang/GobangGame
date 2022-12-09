@@ -16,7 +16,7 @@ public class Player {
         playerIndex++;
     }
 
-    //联机时初始化两个玩家
+    //初始化两个玩家
     public static void init() {
         myPlayer = new Player();
         otherPlayer = new Player();

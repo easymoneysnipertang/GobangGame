@@ -16,7 +16,7 @@ import model.Player;
 public class MainFrame extends JFrame{
 	private static final long serialVersionUID = 1L;
 	
-    public static final String BUILD_TIME = "2022.11.27";
+    public static final String BUILD_TIME = "since 2022.11.27";
     public static final String WORDS = "Java大作业";
     
     //窗口大小

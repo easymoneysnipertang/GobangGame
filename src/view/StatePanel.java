@@ -32,11 +32,11 @@ public class StatePanel extends JPanel {
         this.add(timeLabel);
         this.add(colorLabel);
         my = this;
-        updateInfo();
+        updataInfo();
     }
 
     //更新状态面板
-    private static void updateInfo() {
+    private static void updataInfo() {
         new Thread(() -> {
             while (true) {//用线程来进行刷新
                 try {
@@ -50,7 +50,7 @@ public class StatePanel extends JPanel {
                 } else if (Spot.whiteChess.equals(color)) {
                     colorLabel.setText("白子说话");
                 } else {
-                    colorLabel.setText("玩家:黑棋先下");
+                    colorLabel.setText("黑棋先下");
                 }
 
                 switch (GameCenter.getMode()) {

@@ -17,7 +17,6 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import control.GameOnline;
-import model.DataSocket;
 import model.MySocket;
 import model.Player;
 import model.Spot;
@@ -167,7 +166,7 @@ public class MyDialog extends JDialog {
                 GameOnline.monitor();
                 GameOnline.getOtherAddress();
                 //DataSocket.send(Player.my);
-                DataSocket.send("Hello");
+                //DataSocket.send("Hello");
             } catch (Exception e) {
             }
         });
@@ -254,7 +253,7 @@ public class MyDialog extends JDialog {
                 GameOnline.monitor();
                 GameOnline.getOtherAddress();
                 // DataSocket.send(Player.my);
-                DataSocket.send("HI");
+                //DataSocket.send("HI");
             } catch (Exception e1) {
             }
         });

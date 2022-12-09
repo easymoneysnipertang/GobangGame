@@ -18,10 +18,10 @@ import view.MainFrame;
 //将数据处理成字符串而后进行接收，发送
 @SuppressWarnings("removal")
 public class DataSocket {
+	public final static String RETRACT = "retract";
 	//接收发送的类型
 	public final static String TYPE_chat = "chat";
     public final static String TYPE_spot = "spot";
-    public final static String TYPE_player = "player";
 
     //处理数据后发送
     public static void send(Object object) {
@@ -46,14 +46,6 @@ public class DataSocket {
             }
             MySocket.sendData(list);
         }
-        //玩家信息
-        if (object instanceof Player) {
-            Player player = (Player) object;
-            list.add(TYPE_player);
-            list.add(player.getName());
-            list.add("" + player.getGrade());
-            MySocket.sendData(list);
-        }
         //聊天内容
         if (object instanceof String) {
             list.add(TYPE_chat);
@@ -67,7 +59,7 @@ public class DataSocket {
         String str = list.get(0);//第一个字符串判断数据类型
         switch (str) {
             case TYPE_chat:
-            	if(list.get(1).equals("retract")) {//悔棋通过特定字符串发送过来
+            	if(list.get(1).equals(RETRACT)) {//悔棋通过特定字符串发送过来
             		JOptionPane.showMessageDialog(MainFrame.mainFrame,
         	                "对方悔棋", "wait",
         	                JOptionPane.CANCEL_OPTION);
@@ -104,12 +96,6 @@ public class DataSocket {
                 int col = Integer.valueOf(list.get(2));
                 String color = Player.otherPlayer.getColor();
                 ChessBoard.submitPaint(new Spot(row, col, color));
-                break;
-            case TYPE_player:
-                String name = list.get(1);
-                int grade = Integer.valueOf(list.get(2));
-                Player.otherPlayer.setName(name);
-                Player.otherPlayer.setGrade(grade);
                 break;
             default:
                 System.out.println("DataSocket 收到未知数据！" + str);

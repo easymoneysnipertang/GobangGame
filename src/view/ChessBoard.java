@@ -102,10 +102,10 @@ public class ChessBoard extends JPanel {
             //弹出对话框
             if (Spot.whiteChess.equals(TableData.getNowColor())) {
                 //当前应该下白棋，则黑棋获胜，显示对话框
-                JOptionPane.showMessageDialog(MainFrame.mainFrame, "黑棋获胜！增加100积分！",
+                JOptionPane.showMessageDialog(MainFrame.mainFrame, "黑棋获胜！增加1分！",
                         "游戏结束", JOptionPane.CANCEL_OPTION);
             } else {
-                JOptionPane.showMessageDialog(MainFrame.mainFrame, "白棋获胜！增加100积分！",
+                JOptionPane.showMessageDialog(MainFrame.mainFrame, "白棋获胜！增加1分！",
                         "游戏结束", JOptionPane.CANCEL_OPTION);
             }
         }
