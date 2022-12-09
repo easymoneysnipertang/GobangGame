@@ -15,9 +15,6 @@ import model.Player;
 
 public class MainFrame extends JFrame{
 	private static final long serialVersionUID = 1L;
-	
-    public static final String BUILD_TIME = "since 2022.11.27";
-    public static final String WORDS = "Java大作业";
     
     //窗口大小
     private int width = 730;
@@ -41,15 +38,6 @@ public class MainFrame extends JFrame{
         int sHeight = Toolkit.getDefaultToolkit().getScreenSize().height;
         this.setLocation((sWidth - width) / 2, (sHeight - height) / 2);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-//        //设置图标
-//        try {
-//            java.net.URL imgURL = this.getClass().getResource("/images/goBang.png");
-//            ImageIcon imgIcon = new ImageIcon(imgURL);
-//            this.setIconImage(imgIcon.getImage());
-//        } catch (Exception e) {
-//            System.out.println("图标设置失败！");
-//        }
 
         addWidget();
     }

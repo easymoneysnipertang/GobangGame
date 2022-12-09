@@ -33,15 +33,15 @@ public class UserPanel extends JPanel {
         otherPanel.setLayout(new GridLayout(0, 1));
 
         //往面板上添加标签
-        myName = new JLabel("玩家: ");
-        myAddress = new JLabel("IP: ");
-        myColor = new JLabel("棋色: ");
-        myGrade = new JLabel("分数: ");
+        myName = new JLabel(" 玩家: ");
+        myAddress = new JLabel(" IP: ");
+        myColor = new JLabel(" 棋色: ");
+        myGrade = new JLabel(" 分数: ");
 
-        otherName = new JLabel("玩家: ");
-        otherAddress = new JLabel("IP: ");
-        otherColor = new JLabel("棋色: ");
-        otherGrade = new JLabel("分数: ");
+        otherName = new JLabel(" 玩家: ");
+        otherAddress = new JLabel(" IP: ");
+        otherColor = new JLabel(" 棋色: ");
+        otherGrade = new JLabel(" 分数: ");
 
         myPanel.add(myName);
         myPanel.add(myAddress);
@@ -91,9 +91,9 @@ public class UserPanel extends JPanel {
 
     public static void setGrade(int grade, int position) {
         if (position == left) {
-            myGrade.setText("分数: " + grade);
+            myGrade.setText(" 分数: " + grade);
         } else {
-            otherGrade.setText("分数: " + grade);
+            otherGrade.setText(" 分数: " + grade);
         }
     }
 }

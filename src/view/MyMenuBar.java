@@ -55,8 +55,8 @@ public class MyMenuBar extends JMenuBar {
         about.addActionListener(event -> {
             String function = "Java五子棋";
             String person = "\nStudent_tang\n";
-            String info = function + person + "\n开发时间：" + MainFrame.BUILD_TIME + "\n"
-            								+MainFrame.WORDS;
+            String info = function + person + "\n开发时间：" + "2022.11.27" + "\n"
+            								+"Java大作业";
             JOptionPane.showMessageDialog(null, info, "软件说明",
                     JOptionPane.INFORMATION_MESSAGE);
         });       

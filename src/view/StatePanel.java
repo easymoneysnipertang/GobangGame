@@ -46,11 +46,11 @@ public class StatePanel extends JPanel {
                 }
                 String color = TableData.getNowColor();
                 if (Spot.blackChess.equals(color)) {
-                    colorLabel.setText("黑子说话");
+                    colorLabel.setText("<黑子说话>");
                 } else if (Spot.whiteChess.equals(color)) {
-                    colorLabel.setText("白子说话");
+                    colorLabel.setText("<白子说话>");
                 } else {
-                    colorLabel.setText("黑棋先下");
+                    colorLabel.setText("<黑棋先下>");
                 }
 
                 switch (GameCenter.getMode()) {
@@ -58,13 +58,13 @@ public class StatePanel extends JPanel {
                         modeLabel.setText("当前模式:未开始");
                         break;
                     case GameCenter.MODE_COUPLE:
-                        modeLabel.setText("当前模式:双人对战");
+                        modeLabel.setText("双人互博");
                         break;
                     case GameCenter.MODE_ROBOT:
-                        modeLabel.setText("当前模式:人机对战");
+                        modeLabel.setText("人机模式");
                         break;
                     case GameCenter.MODE_ONLINE:
-                        modeLabel.setText("当前模式:联机对战");
+                        modeLabel.setText("联机对战");
                         break;
                     default:
                         break;

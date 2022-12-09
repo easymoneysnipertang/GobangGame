@@ -32,7 +32,7 @@ public class GameRobot {
                     System.out.println("robotThread 睡眠异常！");
                 }
                 //轮到人机下棋了
-                if (TableData.getNowColor().equals(color)) {
+                if (TableData.getNowColor().equals(color)&&!GameCenter.isEnd()) {
                     Spot spot = playerAI.getBestChess(color);//获取最佳下棋位置
                     ChessBoard.submitPaint(spot);
                 }
